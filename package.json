@@ -14,7 +14,18 @@
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "post-commit": "git push"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "npm run lint"
+    ]
+  },
   "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
