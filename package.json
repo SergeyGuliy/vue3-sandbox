@@ -22,7 +22,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "lint"
+      "npm run lint"
     ]
   },
   "devDependencies": {
