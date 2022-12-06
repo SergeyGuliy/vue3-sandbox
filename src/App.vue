@@ -7,6 +7,8 @@ import Watch from "./components/t-watch/t-watch-wrapper.vue";
 
 <template>
   <div class="wrapper">
+    <GInput />
+    <GRadio />
     <Props :propNumber="1" />
     <VModelWrapper />
     <ComputedWrapper :propNumber="5" />

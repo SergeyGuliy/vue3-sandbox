@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 
-let { propNumber } = defineProps({
+let prop = defineProps({
   propNumber: {
     type: Number,
     required: true,
@@ -21,7 +21,7 @@ let dataNumber = ref(2);
 let computedNumber = computed(() => dataNumber.value * 2);
 
 watch(
-  () => propNumber,
+  () => prop.propNumber,
   (v) => {
     console.log(`new 'propNumber' = ${v}`);
   }
