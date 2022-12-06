@@ -16,12 +16,6 @@
     "vue-router": "^4.1.6"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
-    ]
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
