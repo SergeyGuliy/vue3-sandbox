@@ -7,3 +7,8 @@ import { installPlugins } from "@/plugins";
 installPlugins(app);
 
 app.mount("#app");
+
+
+
+
+
