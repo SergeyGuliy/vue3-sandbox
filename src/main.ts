@@ -6,6 +6,10 @@ const app = createApp(App);
 import { installPlugins } from "@/plugins";
 installPlugins(app);
 
+
+
+
+
 app.mount("#app");
 
 
