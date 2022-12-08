@@ -1,27 +1,29 @@
 <template>
-  <label for="">
+  <label>
     <div v-if="label">
       {{ label }}
     </div>
-    <input :type="type" />
+    <input :type="type" :placeholder="placeholder" v-model="localValue" />
   </label>
 </template>
 <script setup lang="ts">
-import { supportedTypes } from "@/components/global-components/_constants";
+import { inputComposable } from "@/components/global-components/_composable";
 
-const props = defineProps({
-  type: {
-    type: String,
-    default: "text",
-    validator: (v: string): boolean => {
-      return supportedTypes.includes(v);
-    },
-  },
-  label: {
-    type: String,
-    default: "",
-  },
+interface GInputProp {
+  label?: string;
+  placeholder?: string;
+  type?: "text" | "password";
+  value: string;
+}
+
+const props = withDefaults(defineProps<GInputProp>(), {
+  label: "",
+  placeholder: "",
+  type: "text",
 });
+const emits = defineEmits(["update:value"]);
+
+const { localValue } = inputComposable({ props, emits });
 </script>
 
 <style scoped></style>

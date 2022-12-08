@@ -1,17 +1,13 @@
 <template>
   <div>
-    <input
-      type="text"
-      :value="localString"
-      @input="(e) => (localString = e.target.value)"
-    />
+    <input type="text" :value="localString" @input="onInput" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
 
-const emit = defineEmits(["update:string"]);
+const emits = defineEmits(["update:string"]);
 
 let props = defineProps({
   string: {
@@ -26,9 +22,13 @@ const localString = computed({
     return props.string;
   },
   set(newVal) {
-    emit("update:string", newVal);
+    emits("update:string", newVal);
   },
 });
+
+function onInput(e: any): void {
+  localString.value = e?.target?.value;
+}
 </script>
 
 <style scoped></style>

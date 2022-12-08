@@ -9,10 +9,9 @@
 
 <script setup lang="ts">
 import VModel from "./t-v-model.vue";
-import type { interfaceRefString } from "../../../ts/interfaces/ref";
 import { ref } from "vue";
 
-const string: interfaceRefString = ref("qwerty");
+const string = ref("qwerty");
 </script>
 
 <style scoped></style>
