@@ -1,17 +1,17 @@
 import { computed } from "vue";
 
 interface inputComposable {
-  props: { value: any };
+  props: { modelValue: any };
   emits: Function;
 }
 
 export function inputComposable({ props, emits }: inputComposable) {
   const localValue = computed({
     get() {
-      return props.value;
+      return props.modelValue;
     },
     set(newVal) {
-      emits("update:value", newVal);
+      emits("update:modelValue", newVal);
     },
   });
   return {

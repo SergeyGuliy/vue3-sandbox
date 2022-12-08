@@ -12,13 +12,13 @@ import { inputComposable } from "@/components/global-components/_composable";
 
 interface GInputProp {
   label?: string;
-  value: boolean;
+  modelValue: boolean;
 }
 
 const props = withDefaults(defineProps<GInputProp>(), {
   label: "",
 });
-const emits = defineEmits(["update:value"]);
+const emits = defineEmits(["update:modelValue"]);
 
 const { localValue } = inputComposable({ props, emits });
 </script>
