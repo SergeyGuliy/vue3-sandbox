@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="green">hooks</h1>
+    <p>hooks</p>
   </div>
 </template>
 

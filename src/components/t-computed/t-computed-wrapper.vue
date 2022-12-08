@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="green">computed</h1>
-
     <p>propNumber: {{ propNumber }}</p>
     <p>computedProps: {{ computedProps }}</p>
 

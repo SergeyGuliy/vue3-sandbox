@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="green">props</h1>
-
     <p>{{ propNumber }}</p>
     <p>{{ props.propNumber }}</p>
   </div>

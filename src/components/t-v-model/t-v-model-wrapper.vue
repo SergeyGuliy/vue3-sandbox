@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="green">v-model</h1>
-
     <pre>value: {{ string }}</pre>
     <VModel v-model:string="string" />
   </div>

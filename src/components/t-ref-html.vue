@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="green">ref html</h1>
-
     <input type="text" ref="input1" />
     <br />
     <input type="password" ref="input2" />
@@ -12,12 +10,17 @@
       </li>
     </ul>
 
-    <GInput ref="GInput" :modelValue="'value'" @vue:mounted="mountedGInput" />
+    <GInput
+      ref="GInputRef"
+      :modelValue="'value'"
+      @vue:mounted="mountedGInput"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
+import GInput from "./global-components/g-input.vue";
 
 const input1 = ref("input1");
 const input2 = ref("input2");
@@ -31,9 +34,15 @@ onMounted(() => {
   console.log(itemRefs.value);
 });
 
+const GInputRef = ref("GInputRef");
+console.log(GInputRef.value);
+
+onMounted(() => {
+  console.log(GInputRef.value);
+});
+
 function mountedGInput() {
-  const GInputRef = ref("GInput");
-  console.log(GInputRef);
+  console.log(GInputRef.value);
 }
 </script>
 

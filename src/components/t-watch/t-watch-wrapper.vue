@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="green">watch</h1>
-
     <Watch :propNumber="propNumber" />
   </div>
 </template>

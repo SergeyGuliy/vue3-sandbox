@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1 class="green">ref sharing</h1>
-
     <RefSharingInner fer="RefSharingInnerRef" />
   </div>
 </template>
@@ -14,7 +12,7 @@ const outerValue = ref("outer value");
 
 const RefSharingInnerRef = ref("RefSharingInnerRef");
 
-console.warn('RefSharingInnerRef.value');
+console.warn("RefSharingInnerRef.value");
 console.log(RefSharingInnerRef.value);
 
 defineExpose({
