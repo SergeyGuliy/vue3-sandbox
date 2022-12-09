@@ -1,7 +1,7 @@
 import { onMounted, onUnmounted, ref, watch } from "vue";
 
 type MyElement = {
-  value: Element | null
+  value: Element | null;
 };
 
 interface useEventListener {
