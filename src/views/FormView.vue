@@ -1,15 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main>
+    <pre>{{ form }}</pre>
+    <GInput label="Name" placeholder="Enter your name" v-model="form.name" />
+    <GRadio label="Is more 18&" v-model="form.isMore18" />
+  </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const form = ref({
+  name: "",
+  isMore18: false,
+});
+</script>
