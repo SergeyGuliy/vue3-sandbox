@@ -22,9 +22,12 @@
 
 <script setup lang="ts">
 import { useMouse } from "@/composition/useMouse";
+import { ref } from "vue";
+
+const composition = ref("composition");
 
 const { x, y, mountEventListener, unMountEventListener } =
-  useMouse(".composition");
+  useMouse(composition);
 </script>
 
 <style scoped>

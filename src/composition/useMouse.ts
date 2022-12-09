@@ -1,7 +1,8 @@
+import type { Ref } from "vue";
 import { ref } from "vue";
 import { useEventListener } from "@/composition/useEventListener";
 
-export function useMouse(selector: string) {
+export function useMouse(selector: Ref) {
   const x = ref(0);
   const y = ref(0);
 

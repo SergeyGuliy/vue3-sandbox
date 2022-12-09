@@ -1,6 +1,8 @@
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 
-type MyElement = Element | null;
+type MyElement = {
+  value: Element | null
+};
 
 interface useEventListener {
   mountEventListener: () => void;
@@ -8,20 +10,18 @@ interface useEventListener {
 }
 
 export function useEventListener(
-  selector: string,
+  selector: MyElement,
   eventName: string,
   callback: EventListenerOrEventListenerObject
 ): useEventListener {
   onMounted(mountEventListener);
   onUnmounted(unMountEventListener);
 
-  const element: MyElement = document.querySelector(selector);
-
   function mountEventListener() {
-    element?.addEventListener(eventName, callback);
+    selector?.value?.addEventListener(eventName, callback);
   }
   function unMountEventListener() {
-    element?.removeEventListener(eventName, callback);
+    selector?.value?.removeEventListener(eventName, callback);
   }
 
   return {
