@@ -26,6 +26,7 @@ import Watch from "@/components/t-watch/t-watch-wrapper.vue";
 import RefHtml from "@/components/t-ref-html.vue";
 import RefSharingWrapper from "@/components/t-ref-sharing/t-ref-sharing-wrapper.vue";
 import AsyncComponent from "@/components/t-async-component/t-async-component-wrapper.vue";
+import Directives from "@/components/t-directives.vue";
 import { ref } from "vue";
 
 const mapOfComponents = [
@@ -70,6 +71,11 @@ const mapOfComponents = [
     title: "async component",
     component: AsyncComponent,
     currentTab: "AsyncComponent",
+  },
+  {
+    title: "directives",
+    component: Directives,
+    currentTab: "Directives",
   },
 ];
 
