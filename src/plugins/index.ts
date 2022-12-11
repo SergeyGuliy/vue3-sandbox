@@ -5,8 +5,10 @@ import { installRouter } from "@/plugins/modules/router";
 import { installGlobalStyles } from "@/plugins/modules/global-styles";
 import { installPinia } from "@/plugins/modules/pinia";
 import { installDirectives } from "@/plugins/modules/directives";
+import { installCustomPlugin } from "@/plugins/modules/customPlugin";
 
 export function installPlugins(app: App<Element>): void {
+  installCustomPlugin(app);
   installGlobalComponents(app);
   installRouter(app);
   installPinia(app);
