@@ -15,6 +15,14 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
+import { useSlots, useAttrs } from "vue";
+
+const slots = useSlots();
+const attrs = useAttrs();
+
+console.log(slots);
+console.log(attrs);
+
 const emits = defineEmits(["update:activeTab"]);
 
 const props = withDefaults(
