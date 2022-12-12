@@ -16,6 +16,11 @@ const routes = [
     name: "composition",
     component: () => import("../views/CompositionView.vue"),
   },
+  {
+    path: "/provide-inject",
+    name: "ProvideInject",
+    component: () => import("../views/ProvideInject.vue"),
+  },
 ];
 
 const router = createRouter({
